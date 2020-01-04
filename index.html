@@ -15,124 +15,85 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-        <div class="navbar">
-            <div class="navbar__items">
-                <p class="navbar__items-title">твое лого</p>
-                <div class="navbar__items-text navbar__items-border">подборки</div>
-                <div class="navbar__items-text navbar__items-border">рекомендации</div>
-                <div>
-                    <img src="slide1.png" class="navbar__items-image">
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section__items-search">
-                <form>
-                    <input type="search" placeholder="Трек, исполнитель" class="section__items-input">
-                    <i class="fas fa-redo-alt section__items-icons"></i>
-                    <i class="fas fa-random section__items-icons"></i>
-                    <i class="fas fa-volume-down section__items-icons"></i>
-                    <button class="section__items-button--enter">Войти</button>
-                </form>
-            </div>
+  <div class="container">
+      <nav class="navbar">
+          <h1 class="navbar__items-logo">твое лого</h1>
+          <div class="navbar__items-text">подборки</div>
+          <div class="navbar__items-text">рекомендации</div>
+          <img src="slide1.png" class="navbar__items-image">
+      </nav>
 
-            <div class="section__items-slider">
-                <img src="slide2.png" width=200 height=200>
-                <img src="slide1.png" width=200 height=200>
-                <img src="slide2.png" width=200 height=200>
-                <img src="slide1.png" width=200 height=200>
-                <img src="slide2.png" width=200 height=200>
-                <img src="slide1.png" width=200 height=200>
-                <img src="slide2.png" width=200 height=200>
-            </div>
+      <div class="section">
+          <div class="search">
+              <input type="search" placeholder="Трек, исполнитель" class="search__input">
+              <div class="control-buttons">
+                  <i class="fas fa-redo-alt control-buttons__icons"></i>
+                  <i class="fas fa-random control-buttons__icons"></i>
+                  <i class="fas fa-volume-down control-buttons__icons"></i>
+                  <button class="control-buttons__button">Войти</button>
+              </div>
+          </div>
 
-            <p class="section__items-title">В погоне за подарками</p>
-            <p class="section__items-text">Под настроение</p>
+          <h2 class="section__items-title">В погоне за подарками</h2>
+          <h2 class="section__items-text">Под настроение</h2>
 
-           <!-- <div>
-                
-            </div> -->
+          <div class="section__items-btnmore">Все 26 треков</div>
 
-            <button class="section__items-btnmore">Все 26 треков</button>
+          <p class="section__items-chart--title">Чарт</p>
 
-            <p class="section__items-chart--title">Чарт</p>
+          <div class="chart">
+              <div class="chart-row">
+                  <div class="chart-card">
+                      <img src="slide1.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+                  <div class="chart-card">
+                      <img src="slide2.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+                  <div class="chart-card">
+                      <img src="slide1.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+                  <div class="chart-card">
+                      <img src="slide2.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+              </div>
+              <div class="chart-row">
+                  <div class="chart-card">
+                      <img src="slide1.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+                  <div class="chart-card">
+                      <img src="slide2.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+                  <div class="chart-card">
+                      <img src="slide1.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+                  <div class="chart-card">
+                      <img src="slide2.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Проснуться</p>
+                      <p class="section__items-chart-song">201 трек</p>
+                  </div>
+              </div>
+          </div>
 
-            <div class="section__items-chart">
-                <table>
-                    <tr>
-                        <td><img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Проснуться</p>
-                            <p class="section__items-chart-song">201 трек</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Для путешествий</p>
-                            <p class="section__items-chart-song">305 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Проснуться</p>
-                            <p class="section__items-chart-song">201 трек</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Заснуть</p>
-                            <p class="section__items-chart-song">242 трека</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">По дороге на работу</p>
-                            <p class="section__items-chart-song">17 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Для вечеринки</p>
-                            <p class="section__items-chart-song">248 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Генеральная весенняя уборка</p>
-                            <p class="section__items-chart-song">26 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Согревающий плейлист для зимних прогулок</p>
-                            <p class="section__items-chart-song">14 треков</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Плейлист для сноубордистов</p>
-                            <p class="section__items-chart-song">137 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Плейлист для катка</p>
-                            <p class="section__items-chart-song">26 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Музыка для путешествий на машине</p>
-                            <p class="section__items-chart-song">30 треков</p>
-                        </td>
-                        <td>
-                            <img src="slide1.png" width=200 height="200">
-                            <p class="section__items-chart--text">Музыка для знакоства в пробках</p>
-                            <p class="section__items-chart-song">30 треков</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="section__items-info">
-                <p>О сервисе</p>
-                <p>Соглашение о конфиденциальности</p>
-                <p>Пользовательское соглашение</p>
-            </div>
-        </div>
+          <div class="section__items-info">
+              <p>О сервисе</p>
+              <p>Соглашение о конфиденциальности</p>
+              <p>Пользовательское соглашение</p>
+          </div>
+      </div>
+  </div>
   </body>
   </html>
