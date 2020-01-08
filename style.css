@@ -40,7 +40,7 @@ body {
 
 .navbar__items-text {
     height: 30px;
-    border-left: 2px solid white;
+    /*border-left: 2px solid white;*/
     font-family: var(--roboto);
     text-transform: capitalize;
     padding-left: 50px;
@@ -51,6 +51,11 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+a:active{
+    border-left: 2px solid white;
+    padding-left: 48px;
 }
 
 .navbar__items-image {
@@ -92,9 +97,14 @@ body {
 }
 
 .control-buttons__icons {
-    color: red;
+    color: grey;
+    opacity: 0.7;
     cursor: pointer;
     margin-right: 10px;
+}
+
+.control-buttons__icons:hover{
+    color: red;
 }
 
 .control-buttons__button {
@@ -159,21 +169,58 @@ body {
     height: 50px;
     width: 200px;
     cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-
+hr {
+    width: 60%;
+    margin-left: 50px;
+    margin-top:0px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+}
 .section__items-chart--title{
     font-family: var(--roboto);
     color: red;
     margin-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 10px;
+    margin-left: 50px;
     font-weight: bold;
+    margin-bottom: 0px;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 100% 100%;
     background-repeat: no-repeat;
-    background-size: 40% 3px;
+    background-size: 100% 5px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
 }
 
+.section__items-chart--text{
+    font-family: var(--roboto);
+    margin-bottom: 0px;
+}
 
+.section__items-chart-song{
+    font-family: var(--roboto);
+    margin-top: 0px;
+}
+
+.info-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.section__items-info{
+    font-family: var(--roboto);
+    padding-left: 50px;
+}
+
+.slider{
+    height: 100%;
+    width: 100%;
+    border: solid black 1px;
+}

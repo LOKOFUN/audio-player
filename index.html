@@ -1,9 +1,4 @@
-  <!--  1. Как сделать, чтобы красная полоса не вылазила за пределы при большом экране
-        2. Как растянуть картинку на ширину всей полосы при большом экране
-        3. Как вставить музыку--> 
-
-
- <!doctype html>                                                                                                   
+<!doctype html>                                                                                                   
 <html lang="en">
   <head>
     <title>Name</title>
@@ -18,8 +13,10 @@
   <div class="container">
       <nav class="navbar">
           <h1 class="navbar__items-logo">твое лого</h1>
-          <div class="navbar__items-text">подборки</div>
-          <div class="navbar__items-text">рекомендации</div>
+          <!--<div class="navbar__items-text">подборки</div>
+          <div class="navbar__items-text">рекомендации</div>-->
+          <a class="navbar__items-text">подборки</a>
+          <a class="navbar__items-text">рекомендации</a>
           <img src="slide1.png" class="navbar__items-image">
       </nav>
 
@@ -34,66 +31,123 @@
               </div>
           </div>
 
+          <div class="volume" data-range-orientation="vertical" data-range-type="min">
+            
+          </div>
+
           <h2 class="section__items-title">В погоне за подарками</h2>
           <h2 class="section__items-text">Под настроение</h2>
 
           <div class="section__items-btnmore">Все 26 треков</div>
-
+          
           <p class="section__items-chart--title">Чарт</p>
+
+          <hr>
 
           <div class="chart">
               <div class="chart-row">
                   <div class="chart-card">
-                      <img src="slide1.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                      <img src="albums/post_malone.png" class="chart-card__image">
+                      <p class="section__items-chart--text">Hollywood's Bleeding</p>
+                      <p class="section__items-chart-song">17 треков</p>
                   </div>
                   <div class="chart-card">
-                      <img src="slide2.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                      <img src="albums/billie.png" class="chart-card__image">
+                      <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
+                      <p class="section__items-chart-song">12 треков</p>
                   </div>
                   <div class="chart-card">
-                      <img src="slide1.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                      <img src="albums/trip.png" class="chart-card__image">
+                      <p class="section__items-chart--text">A Love Letter To You 4</p>
+                      <p class="section__items-chart-song">21 трек</p>
                   </div>
                   <div class="chart-card">
-                      <img src="slide2.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                      <img src="albums/Jus.jpg" class="chart-card__image">
+                      <p class="section__items-chart--text">goodbye & good riddance</p>
+                      <p class="section__items-chart-song">15 треков</p>
                   </div>
               </div>
               <div class="chart-row">
                   <div class="chart-card">
-                      <img src="slide1.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                    <img src="albums/Jus.jpg" class="chart-card__image">
+                    <p class="section__items-chart--text">goodbye & good riddance</p>
+                    <p class="section__items-chart-song">15 треков</p>
                   </div>
                   <div class="chart-card">
-                      <img src="slide2.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                    <img src="albums/post_malone.png" class="chart-card__image">
+                    <p class="section__items-chart--text">Hollywood's Bleeding</p>
+                    <p class="section__items-chart-song">17 треков</p>
                   </div>
                   <div class="chart-card">
-                      <img src="slide1.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                    <img src="albums/billie.png" class="chart-card__image">
+                    <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
+                    <p class="section__items-chart-song">12 треков</p>
                   </div>
                   <div class="chart-card">
-                      <img src="slide2.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Проснуться</p>
-                      <p class="section__items-chart-song">201 трек</p>
+                    <img src="albums/trip.png" class="chart-card__image">
+                    <p class="section__items-chart--text">A Love Letter To You 4</p>
+                    <p class="section__items-chart-song">21 трек</p>
                   </div>
               </div>
+              <div class="chart-row">
+                <div class="chart-card">
+                    <img src="albums/trip.png" class="chart-card__image">
+                    <p class="section__items-chart--text">A Love Letter To You 4</p>
+                    <p class="section__items-chart-song">21 трек</p>
+                </div>
+                <div class="chart-card">
+                    <img src="albums/Jus.jpg" class="chart-card__image">
+                    <p class="section__items-chart--text">goodbye & good riddance</p>
+                    <p class="section__items-chart-song">15 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="albums/post_malone.png" class="chart-card__image">
+                    <p class="section__items-chart--text">Hollywood's Bleeding</p>
+                    <p class="section__items-chart-song">17 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="albums/billie.png" class="chart-card__image">
+                    <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
+                    <p class="section__items-chart-song">12 треков</p>
+                </div>
+            </div>
+            <div class="chart-row">
+                <div class="chart-card">
+                    <img src="albums/billie.png" class="chart-card__image">
+                    <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
+                    <p class="section__items-chart-song">12 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="albums/trip.png" class="chart-card__image">
+                    <p class="section__items-chart--text">A Love Letter To You 4</p>
+                    <p class="section__items-chart-song">21 трек</p>
+                </div>
+                <div class="chart-card">
+                    <img src="albums/Jus.jpg" class="chart-card__image">
+                    <p class="section__items-chart--text">goodbye & good riddance</p>
+                    <p class="section__items-chart-song">15 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="albums/post_malone.png" class="chart-card__image">
+                    <p class="section__items-chart--text">Hollywood's Bleeding</p>
+                    <p class="section__items-chart-song">17 треков</p>
+                </div>
+            </div>
           </div>
 
-          <div class="section__items-info">
-              <p>О сервисе</p>
-              <p>Соглашение о конфиденциальности</p>
-              <p>Пользовательское соглашение</p>
-          </div>
-      </div>
+            <div class="info-row">
+                <div class="section__items-info">
+                    <p>О сервисе</p>
+                    <p>Соглашение о конфиденциальности</p>
+                    <p>Пользовательское соглашение</p>
+                </div>
+                <div class="section__items--download">
+                    <img src="appstore.png" >
+                    <img src="googleplay.png">
+                </div>
+            </div>
+
+        </div>
   </div>
   </body>
   </html>
