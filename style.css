@@ -40,7 +40,6 @@ body {
 
 .navbar__items-text {
     height: 30px;
-    /*border-left: 2px solid white;*/
     font-family: var(--roboto);
     text-transform: capitalize;
     padding-left: 50px;
@@ -219,8 +218,29 @@ hr {
     padding-left: 50px;
 }
 
-.slider{
-    height: 100%;
+.player-controls
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    border: solid black 1px;
+    color: white;
+    height: 10%;
+}
+
+.progress
+{
+    position: absolute;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0;
+    height: 1%;
+}
+
+.player
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
