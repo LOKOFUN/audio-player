@@ -21,7 +21,7 @@ body {
     justify-content: flex-start;
 }
 
-.navbar {
+.leftbar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -29,6 +29,7 @@ body {
     background-color: red;
     width: 20%;
     height: 100%;
+    margin-right: 50px;
 }
 
 .navbar__items-logo {
@@ -52,7 +53,7 @@ body {
     align-items: center;
 }
 
-a:active{
+a:active {
     border-left: 2px solid white;
     padding-left: 48px;
 }
@@ -76,7 +77,6 @@ a:active{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     height: 60px;
     margin-top: 20px;
 }
@@ -84,25 +84,17 @@ a:active{
 .search__input {
     font-family: var(--roboto);
     height: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
-    flex-shrink: 1;
     padding-left: 10px;
     width: 60%;
 }
 
-.control-buttons {
-    flex-grow: 0;
-}
-
 .control-buttons__icons {
     color: grey;
-    opacity: 0.7;
     cursor: pointer;
     margin-right: 10px;
 }
 
-.control-buttons__icons:hover{
+.control-buttons__icons:hover {
     color: red;
 }
 
@@ -118,6 +110,31 @@ a:active{
     cursor: pointer;
 }
 
+.chart-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    border-bottom: solid 1px grey;
+}
+
+.chart-menu__items-button {
+    background-color: inherit;
+    border-style: none;
+    font-family: var(--roboto);
+    color: red;
+    font-size: larger;
+    padding-bottom: 3px;
+    outline: none;
+}
+
+.chart-menu__items-button:active{
+    box-shadow: 0px 5px 0px;
+}
+
 .chart {
     display: flex;
     flex-direction: column;
@@ -126,7 +143,6 @@ a:active{
 .chart-row {
     display: flex;
     flex-direction: row;
-    padding-left: 50px;
 }
 
 .chart-card {
@@ -141,21 +157,18 @@ a:active{
     width: 100%;
 }
 
-.section__items-title{
+.section__items-title {
     font-family: var(--roboto);
-    padding-left: 40px;
-    margin:10px;
 }
 
-.section__items-text{
+.section__items-text {
     font-family: var(--roboto);
-    opacity: 0.7;
-    padding-left: 50px;
-    font-size:12px;
-    margin:0;
+    color: grey;
+    font-size: 12px;
+    margin: 0;
 }
 
-.section__items-btnmore{
+.section__items-btnmore {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +176,6 @@ a:active{
     background-color: red;
     color: white;
     font-family: var(--roboto);
-    margin-left: 50px;
     margin-top: 50px;
     height: 50px;
     width: 200px;
@@ -172,40 +184,17 @@ a:active{
     padding-bottom: 10px;
 }
 
-hr {
-    width: 60%;
-    margin-left: 50px;
-    margin-top:0px;
-    margin-bottom: 20px;
-    padding-top: 0px;
-}
-.section__items-chart--title{
-    font-family: var(--roboto);
-    color: red;
-    margin-top: 50px;
-    margin-left: 50px;
-    font-weight: bold;
-    margin-bottom: 0px;
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 5px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-}
-
-.section__items-chart--text{
+.section__items-chart--text {
     font-family: var(--roboto);
     margin-bottom: 0px;
 }
 
-.section__items-chart-song{
+.section__items-chart-song {
     font-family: var(--roboto);
     margin-top: 0px;
 }
 
-.info-row{
+.info-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -213,13 +202,11 @@ hr {
     width: 100%;
 }
 
-.section__items-info{
+.section__items-info {
     font-family: var(--roboto);
-    padding-left: 50px;
 }
 
-.player-controls
-{
+.player-controls {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,8 +215,7 @@ hr {
     height: 10%;
 }
 
-.progress
-{
+.progress {
     position: absolute;
     width: 20%;
     background-color: rgba(255, 255, 255, 0.1);
@@ -237,8 +223,7 @@ hr {
     height: 1%;
 }
 
-.player
-{
+.player {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
