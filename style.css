@@ -163,7 +163,7 @@ a:active {
 
 .section__items-text {
     font-family: var(--roboto);
-    color: grey;
+    color:grey;
     font-size: 12px;
     margin: 0;
 }
