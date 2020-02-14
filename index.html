@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/6650870dff.js" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -22,9 +23,9 @@
               <progress value="0" max="100" class="progress"></progress>
           </div>
           <div class="player-controls">
-              <i class="fas fa-backward player-controls"></i>
-              <i class="fas fa-play player-controls" ></i>
-              <i class="fas fa-forward player-controls"></i>
+              <button class="player-buttons"><i class="fas fa-backward" onclick="prevSong()"></i></button>
+              <button id="btnPlay" class="player-buttons" onclick="playPause()"><i class="fas fa-play" ></i></button>
+              <button class="player-buttons"><i class="fas fa-forward" onclick="nextSong()"></i></button>
           </div>
       </div>
 
@@ -46,8 +47,17 @@
 
           <div class="chart-menu">
              <div class="chart-menu__items">
-                 <button class="chart-menu__items-button">Чарт</button>
+                 <span class="chart-menu__items-button">Чарт</span>
              </div>
+              <div class="chart-menu__items">
+                  <span class="chart-menu__items-button">Топ 20</span>
+              </div>
+              <div class="chart-menu__items">
+                  <span class="chart-menu__items-button">Еще что-то</span>
+              </div>
+              <div class="chart-menu__items">
+                  <span class="chart-menu__items-button">Ну и еще кнопка</span>
+              </div>
           </div>
 
           <div class="chart">

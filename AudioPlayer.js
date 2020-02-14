@@ -1,0 +1,2 @@
+let context = new AudioContext;
+
