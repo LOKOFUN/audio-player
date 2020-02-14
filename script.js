@@ -12,7 +12,9 @@ let list = [{
     },
     {
         id:2,
-        src: 'song1.mp3'}];
+        src: 'song1.mp3',
+        image: 'slide2.png'
+    }];
 
 audioObj = new Audio();
 audioObj.src = list[currentId].src;
@@ -20,10 +22,12 @@ audioObj.src = list[currentId].src;
 let playPause = () => {
     if(!isPlaying){
         audioObj.play();
+        let btnPlay = document.getElementById("btnPlay").innerHTML = "<i class=\"fas fa-play\" ></i>";
     }
     else
     {
         audioObj.pause();
+        let btnPlay = document.getElementById("btnPlay").innerHTML = "<i class=\"fas fa-pause\"></i>";
     }
     isPlaying = !isPlaying;
 };
@@ -31,9 +35,11 @@ let playPause = () => {
 let nextSong = () => {
     isPlaying = false;
     audioObj.pause();
-    currentId = currentId+1;
+    currentId++;
     audioObj.src = list[currentId].src;
     audioObj.play();
+    let playerPoster = document.getElementById("player-poster");
+    playerPoster.src = list[currentId].image;
 };
 
 let prevSong = () => {
@@ -42,10 +48,18 @@ let prevSong = () => {
     currentId = currentId-1;
     audioObj.src = list[currentId].src;
     audioObj.play();
+    let playerPoster = document.getElementById("player-poster");
+    playerPoster.src = list[currentId].image;
 };
 
 audioObj.onended = () => {
     currentId = currentId+1;
     audioObj.src = list[currentId].src;
     audioObj.play();
+    let playerPoster = document.getElementById("player-poster");
+    playerPoster.src = list[currentId].image;
 };
+
+
+
+

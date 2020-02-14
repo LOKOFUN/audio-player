@@ -19,13 +19,13 @@
               <a class="navbar__items-text">рекомендации</a>
           </nav>
           <div class="player">
-              <img src="albums/post_malone1.png" class="navbar__items-image" alt="...">
+              <img id="player-poster" src="albums/post_malone1.png" class="navbar__items-image" alt="...">
               <progress value="0" max="100" class="progress"></progress>
           </div>
           <div class="player-controls">
-              <button class="player-buttons"><i class="fas fa-backward" onclick="prevSong()"></i></button>
-              <button id="btnPlay" class="player-buttons" onclick="playPause()"><i class="fas fa-play" ></i></button>
-              <button class="player-buttons"><i class="fas fa-forward" onclick="nextSong()"></i></button>
+              <button id="btnPrevSong" class="player-buttons" onclick="prevSong()"><i class="fas fa-backward"></i></button>
+              <button id="btnPlay" class="player-buttons" onclick="playPause()"><i class="fas fa-pause" ></i></button>
+              <button id="btnNextSong" class="player-buttons" onclick="nextSong()"><i class="fas fa-forward"></i></button>
           </div>
       </div>
 
