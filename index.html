@@ -1,120 +1,120 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
-  <head>
+<head>
     <title>Name</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/6650870dff.js" crossorigin="anonymous"></script>
-      <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-  <div class="container">
-      <div class="leftbar">
-          <nav class="navbar">
-              <h1 class="navbar__items-logo">твое лого</h1>
-              <a class="navbar__items-text">подборки</a>
-              <a class="navbar__items-text">рекомендации</a>
-          </nav>
-          <div class="player">
-              <img id="player-poster" src="image/poster/post_malone1.png" class="navbar__items-image" alt="...">
-              <div class="player__items">
-                  <p id="player-singer" class="player-singer">Post Malone</p>
-                  <p id="player-song" class="player-song">Hollywood Bleeding</p>
-              </div>
-              <div class="duration">
-                  <p id="audio-timer">00:00</p>
-                  <p id="player-duration">00:00</p>
-              </div>
-              <progress id="progress" value="0" max="100" class="progress"></progress>
-          </div>
-          <div class="player-controls">
-              <button id="btnPrevSong" class="player-buttons" onclick="prevSong()"><i class="fas fa-backward"></i></button>
-              <button id="btnPlay" class="player-buttons" onclick="playPause()"><i class="fas fa-play" ></i></button>
-              <button id="btnNextSong" class="player-buttons" onclick="nextSong()"><i class="fas fa-forward"></i></button>
-          </div>
-      </div>
+</head>
+<body>
+<div class="container">
+    <div class="leftbar">
+        <nav class="navbar">
+            <h1 class="navbar__items-logo">твое лого</h1>
+            <a class="navbar__items-text">подборки</a>
+            <a class="navbar__items-text">рекомендации</a>
+        </nav>
+        <div class="player">
+            <img id="player-poster" src="image/poster/post_malone1.png" class="navbar__items-image" alt="...">
+            <div class="player__items">
+                <p id="player-singer" class="player-singer">Post Malone</p>
+                <p id="player-song" class="player-song">Hollywood Bleeding</p>
+            </div>
+            <div class="duration">
+                <p id="audio-timer">00:00</p>
+                <p id="player-duration">00:00</p>
+            </div>
+            <progress id="progress" value="0" max="100" class="progress"></progress>
+        </div>
+        <div class="player-controls">
+            <button id="btnPrevSong" class="player-buttons" onclick="prevSong()"><i class="fas fa-backward"></i>
+            </button>
+            <button id="btnPlay" class="player-buttons" onclick="handelPlay()"><i class="fas fa-play"></i></button>
+            <button id="btnNextSong" class="player-buttons" onclick="nextSong()"><i class="fas fa-forward"></i></button>
+        </div>
+    </div>
 
-      <div class="section">
-          <div class="search">
-              <input type="search" placeholder="Трек, исполнитель" class="search__input">
-              <div class="control-buttons">
-                  <i class="fas fa-redo-alt control-buttons__icons"></i>
-                  <i class="fas fa-random control-buttons__icons"></i>
-                  <i class="fas fa-volume-down control-buttons__icons"></i>
-                  <button class="control-buttons__button">Войти</button>
-              </div>
-          </div>
+    <div class="section">
+        <div class="search">
+            <input type="search" placeholder="Трек, исполнитель" class="search__input">
+            <div class="control-buttons">
+                <i class="fas fa-redo-alt control-buttons__icons"></i>
+                <i class="fas fa-random control-buttons__icons"></i>
+                <i class="fas fa-volume-down control-buttons__icons"></i>
+                <button class="control-buttons__button">Войти</button>
+            </div>
+        </div>
 
-          <h2 class="section__items-title">В погоне за подарками</h2>
-          <h2 class="section__items-text">Под настроение</h2>
+        <h2 class="section__items-title">В погоне за подарками</h2>
+        <h2 class="section__items-text">Под настроение</h2>
 
-          <div class="section__items-btnmore">Все 26 треков</div>
+        <div class="section__items-btnmore">Все 26 треков</div>
 
-          <div class="chart-menu">
-             <div class="chart-menu__items">
-                 <span class="chart-menu__items-button">Чарт</span>
-             </div>
-              <div class="chart-menu__items">
-                  <span class="chart-menu__items-button">Топ 20</span>
-              </div>
-              <div class="chart-menu__items">
-                  <span class="chart-menu__items-button">Еще что-то</span>
-              </div>
-              <div class="chart-menu__items">
-                  <span class="chart-menu__items-button">Ну и еще кнопка</span>
-              </div>
-          </div>
+        <div class="chart-menu">
+            <div class="chart-menu__items">
+                <span class="chart-menu__items-button">Чарт</span>
+            </div>
+            <div class="chart-menu__items">
+                <span class="chart-menu__items-button">Топ 20</span>
+            </div>
+            <div class="chart-menu__items">
+                <span class="chart-menu__items-button">Еще что-то</span>
+            </div>
+            <div class="chart-menu__items">
+                <span class="chart-menu__items-button">Ну и еще кнопка</span>
+            </div>
+        </div>
 
-          <div class="chart">
-              <div class="chart-row">
-                  <div class="chart-card">
-                      <img src="image/albums/post_malone.png" class="chart-card__image">
-                      <p class="section__items-chart--text">Hollywood's Bleeding</p>
-                      <p class="section__items-chart-song">17 треков</p>
-                  </div>
-
-                  <div class="chart-card">
-                      <img src="image/albums/billie.png" class="chart-card__image">
-                      <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
-                      <p class="section__items-chart-song">12 треков</p>
-                  </div>
-                  <div class="chart-card">
-                      <img src="image/albums/trip.png" class="chart-card__image">
-                      <p class="section__items-chart--text">A Love Letter To You 4</p>
-                      <p class="section__items-chart-song">21 трек</p>
-                  </div>
-                  <div class="chart-card">
-                      <img src="image/albums/Jus.jpg" class="chart-card__image">
-                      <p class="section__items-chart--text">goodbye & good riddance</p>
-                      <p class="section__items-chart-song">15 треков</p>
-                  </div>
-              </div>
-              <div class="chart-row">
-                  <div class="chart-card">
-                    <img src="image/albums/Jus.jpg" class="chart-card__image">
-                    <p class="section__items-chart--text">goodbye & good riddance</p>
-                    <p class="section__items-chart-song">15 треков</p>
-                  </div>
-                  <div class="chart-card">
+        <div class="chart">
+            <div class="chart-row">
+                <div class="chart-card">
                     <img src="image/albums/post_malone.png" class="chart-card__image">
                     <p class="section__items-chart--text">Hollywood's Bleeding</p>
                     <p class="section__items-chart-song">17 треков</p>
-                  </div>
-                  <div class="chart-card">
+                </div>
+
+                <div class="chart-card">
                     <img src="image/albums/billie.png" class="chart-card__image">
                     <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
                     <p class="section__items-chart-song">12 треков</p>
-                  </div>
-                  <div class="chart-card">
+                </div>
+                <div class="chart-card">
                     <img src="image/albums/trip.png" class="chart-card__image">
                     <p class="section__items-chart--text">A Love Letter To You 4</p>
                     <p class="section__items-chart-song">21 трек</p>
-                  </div>
-              </div>
-              <div class="chart-row">
+                </div>
+                <div class="chart-card">
+                    <img src="image/albums/Jus.jpg" class="chart-card__image">
+                    <p class="section__items-chart--text">goodbye & good riddance</p>
+                    <p class="section__items-chart-song">15 треков</p>
+                </div>
+            </div>
+            <div class="chart-row">
+                <div class="chart-card">
+                    <img src="image/albums/Jus.jpg" class="chart-card__image">
+                    <p class="section__items-chart--text">goodbye & good riddance</p>
+                    <p class="section__items-chart-song">15 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="image/albums/post_malone.png" class="chart-card__image">
+                    <p class="section__items-chart--text">Hollywood's Bleeding</p>
+                    <p class="section__items-chart-song">17 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="image/albums/billie.png" class="chart-card__image">
+                    <p class="section__items-chart--text">When We All Fall Asleep, Where Do We Go?</p>
+                    <p class="section__items-chart-song">12 треков</p>
+                </div>
+                <div class="chart-card">
+                    <img src="image/albums/trip.png" class="chart-card__image">
+                    <p class="section__items-chart--text">A Love Letter To You 4</p>
+                    <p class="section__items-chart-song">21 трек</p>
+                </div>
+            </div>
+            <div class="chart-row">
                 <div class="chart-card">
                     <img src="image/albums/trip.png" class="chart-card__image">
                     <p class="section__items-chart--text">A Love Letter To You 4</p>
@@ -158,20 +158,21 @@
                     <p class="section__items-chart-song">17 треков</p>
                 </div>
             </div>
-          </div>
+        </div>
 
-            <div class="info-row">
-                <div class="section__items-info">
-                    <p>О сервисе</p>
-                    <p>Соглашение о конфиденциальности</p>
-                    <p>Пользовательское соглашение</p>
-                </div>
-                <div class="section__items--download">
-                    <img src="image/download/appstore.png" >
-                    <img src="image/download/googleplay.png">
-                </div>
+        <div class="info-row">
+            <div class="section__items-info">
+                <p>О сервисе</p>
+                <p>Соглашение о конфиденциальности</p>
+                <p>Пользовательское соглашение</p>
+            </div>
+            <div class="section__items--download">
+                <img src="image/download/appstore.png">
+                <img src="image/download/googleplay.png">
             </div>
         </div>
-  </div>
-  </body>
-  </html>
+    </div>
+</div>
+</body>
+<script async src="script.js"></script>
+</html>
