@@ -204,18 +204,17 @@ a:active {
 }
 
 .progress {
-    position: absolute;
-    width: 19.5%;
+    display: flex;
     background-color: rgba(255, 255, 255, 0.1);
     border: 0;
-    height: 1%;
+    height: 10px;
+    width: 100%;
 }
 
 .player {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
 }
 
 .player-buttons{
@@ -236,4 +235,20 @@ a:active {
     width: 100%;
     height: 10%;
     align-items: center;
+}
+
+.duration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    color: white
+}
+
+.player__items{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    color: white;
 }
