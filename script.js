@@ -1,3 +1,6 @@
+// TODO: прогресс бар
+// TODO: кнопки управления контекстом аудио объекта
+
 let currentId = 0;
 const list = [
     {
@@ -26,49 +29,42 @@ const list = [
 let playerPoster = document.getElementById('player-poster');
 let playerSong = document.getElementById('player-song');
 let playerSinger = document.getElementById('player-singer');
-
+let playButton = document.getElementById('btnPlay');
 playerSong.innerText = list[0].song;
 
 audioObj = new Audio();
 audioObj.volume = 0.2;
 audioObj.src = list[currentId].src;
-let handlerTimer;
 
 const playSong = () => {
     audioObj.play();
-    document.getElementById('btnPlay').innerHTML = '<i class="fas fa-pause"></i>';
-    handlerTimer = setInterval(countSeconds = () => {
-        duration = (audioObj.currentTime % 60).toFixed(0);
-        document.getElementById('count-duration').innerHTML = duration;
-    },1000);
+    playButton.innerHTML = '<i class="fas fa-pause"></i>';
 };
 
 const pauseSong = () => {
     audioObj.pause();
-    document.getElementById('btnPlay').innerHTML = '<i class="fas fa-play" ></i>';
-    clearInterval(handlerTimer);
+    playButton.innerHTML = '<i class="fas fa-play" ></i>';
 };
 
 const handelPlay = () => audioObj.paused ? playSong() : pauseSong();
+
+const setSongInfo = () => {
+    audioObj.src = list[currentId].src;
+    playerPoster.src = list[currentId].image;
+    playerSong.innerText = list[currentId].song;
+    playerSinger.innerText = list[currentId].singer;
+    playSong();
+};
 
 const nextSong = () => {
     audioObj.paused;
     audioObj.pause();
     if (currentId < list.length - 1) {
         currentId++;
-        audioObj.src = list[currentId].src;
-        audioObj.play();
-        playerPoster.src = list[currentId].image;
-        playerSong.innerText = list[currentId].song;
-        playerSinger.innerText = list[currentId].singer;
-    }
-    else {
+        setSongInfo();
+    } else {
         currentId = 0;
-        audioObj.src = list[currentId].src;
-        audioObj.play();
-        playerPoster.src = list[currentId].image;
-        playerSong.innerText = list[currentId].song;
-        playerSinger.innerText = list[currentId].singer;
+        setSongInfo();
     }
 };
 
@@ -76,37 +72,31 @@ const prevSong = () => {
     audioObj.paused;
     audioObj.pause();
     if (currentId > 0) {
-        currentId = currentId - 1;
-        audioObj.src = list[currentId].src;
-        audioObj.play();
-        playerPoster.src = list[currentId].image;
-        playerSong.innerText = list[currentId].song;
-        playerSinger.innerText = list[currentId].singer;
-    }
-    else{
-        currentId = list.length -1;
-        audioObj.src = list[currentId].src;
-        audioObj.play();
-        playerPoster.src = list[currentId].image;
-        playerSong.innerText = list[currentId].song;
-        playerSinger.innerText = list[currentId].singer;
+        currentId--;
+        setSongInfo();
+    } else {
+        currentId = list.length - 1;
+        setSongInfo();
     }
 };
 
 audioObj.onended = () => {
     currentId = currentId + 1;
-    audioObj.src = list[currentId].src;
-    audioObj.play();
-    playerPoster.src = list[currentId].image;
-    playerSong.innerText = list[currentId].song;
-    playerSinger.innerText = list[currentId].singer;
+    setSongInfo();
 };
 
-audioObj.onloadedmetadata  = function () {
+audioObj.onloadedmetadata = () => {
     let min = (Math.floor(audioObj.duration / 60));
     let sec = (audioObj.duration % 60).toFixed(0);
     let playerDuration = document.getElementById('player-duration');
-    playerDuration.innerText = min + ':' + sec;
+
+    playerDuration.innerText = `${min}:${sec}`;
 };
 
+audioObj.ontimeupdate = () => {
+    let min = (Math.floor(audioObj.currentTime / 60));
+    let sec = (audioObj.currentTime % 60).toFixed(0);
+
+    document.getElementById('count-duration').innerText = `${min}:${sec}`;
+};
 
