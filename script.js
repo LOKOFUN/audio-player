@@ -30,6 +30,7 @@ let playerSinger = document.getElementById('player-singer');
 playerSong.innerText = list[0].song;
 
 audioObj = new Audio();
+audioObj.volume = 0.2;
 audioObj.src = list[currentId].src;
 let handlerTimer;
 
