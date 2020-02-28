@@ -24,16 +24,26 @@ const list = [
         song: 'привычка',
         singer: 'скриптонит'
     },
+    {
+        id: 3,
+        src: 'music/song4.mp3',
+        image: 'image/poster/slide2.png',
+        song: 'ТУ ТУ ТУ',
+        singer: 'КРАШ'
+    },
 ];
 
 let playerPoster = document.getElementById('player-poster');
 let playerSong = document.getElementById('player-song');
 let playerSinger = document.getElementById('player-singer');
 let playButton = document.getElementById('btnPlay');
+let volumeButton = document.getElementById('volume');
+let refreshButton = document.getElementById('refresh');
+let repeatButton = document.getElementById('repeat');
 playerSong.innerText = list[0].song;
 
 audioObj = new Audio();
-audioObj.volume = 0.2;
+audioObj.volume = 1;
 audioObj.src = list[currentId].src;
 
 const playSong = () => {
@@ -81,7 +91,7 @@ const prevSong = () => {
 };
 
 audioObj.onended = () => {
-    currentId = currentId + 1;
+    currentId++;
     setSongInfo();
 };
 
@@ -99,4 +109,52 @@ audioObj.ontimeupdate = () => {
 
     document.getElementById('count-duration').innerText = `${min}:${sec}`;
 };
+
+const enableVolume = () => {
+    audioObj.volume = 1;
+    volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+};
+
+const muteVolume = () => {
+  audioObj.volume = 0;
+  volumeButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+};
+
+const handleVolume = () => audioObj.volume ? muteVolume() : enableVolume();
+
+const animationRepeat = () => {
+    repeatButton.animate([
+    {transform: 'rotate(0deg)'},
+    {transform: 'rotate(360deg)'}],
+    {duration: 1000}
+)};
+
+const animationRefresh = () => {
+  refreshButton.animate([
+      {transform: 'translateY(0px)'},
+      {transform: 'translateY(2px)'},
+      {transform: 'translateY(-4px)'}],
+      {duration: 100})
+};
+
+const  refreshSong = () => {
+    currentId = [Math.floor(Math.random() * list.length)];
+    audioObj.play();
+    animationRefresh();
+    setSongInfo();
+};
+
+const repeatSong = () => {
+    audioObj.onended = () => {
+        audioObj.src = list[currentId].src;
+        audioObj.play();
+    };
+
+    animationRepeat();
+};
+
+
+
+
+
 

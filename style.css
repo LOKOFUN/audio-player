@@ -84,16 +84,6 @@ a:active {
     width: 60%;
 }
 
-.control-buttons__icons {
-    color: grey;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.control-buttons__icons:hover {
-    color: red;
-}
-
 .control-buttons__button {
     height: 33px;
     width: 75px;
@@ -133,6 +123,7 @@ a:active {
 
 .chart-menu__items-button:hover {
     box-shadow: 0px 5px 0px;
+    cursor: pointer;
 }
 
 .chart {
@@ -211,6 +202,10 @@ a:active {
     width: 100%;
 }
 
+.progress:hover{
+    cursor: pointer;
+}
+
 .player {
     width: 100%;
     display: flex;
@@ -240,9 +235,10 @@ a:active {
 .duration{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-    color: white
+    color: white;
+    font-size: 14px;
 }
 
 .player__items{
@@ -251,4 +247,17 @@ a:active {
     align-items: flex-end;
     justify-content: space-around;
     color: white;
+}
+
+.control-buttons__items {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    color: grey;
+    cursor: pointer;
+}
+
+.control-buttons__items:hover{
+    color: red;
 }
